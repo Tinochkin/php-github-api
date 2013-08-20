@@ -121,4 +121,18 @@ class User extends AbstractApi
     {
         return $this->get('users/' . urlencode($username) . '/events/public');
     }
+
+    /**
+     * List user organizations
+     *
+     * @link http://developer.github.com/v3/orgs/#list-user-organizations
+     *
+     * @param string $username
+     *
+     * @return array
+     */
+    public function organizations($username)
+    {
+        return $this->get('users/' . urlencode($username) . '/orgs');
+    }
 }
