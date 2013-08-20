@@ -1,11 +1,15 @@
 {
-    "name": "knplabs/github-api",
+    "name": "bestdeveloper/php-github-api",
     "type": "library",
     "description": "GitHub API v3 client",
-    "homepage": "https://github.com/KnpLabs/php-github-api",
-    "keywords": ["github", "gh", "api", "gist"],
+    "homepage": "https://github.com/bestdeveloper/php-github-api",
+    "keywords": ["github", "api"],
     "license": "MIT",
     "authors": [
+        {
+            "name": "Weavora Team",
+            "homepage": "http://weavora.com"
+        },
         {
             "name": "KnpLabs Team",
             "homepage": "http://knplabs.com"
