@@ -170,7 +170,12 @@ class HttpClient implements HttpClientInterface
         $request = $this->createRequest($httpMethod, $path);
         $request->addHeaders($headers);
         if (count($parameters) > 0) {
-            $request->setContent(json_encode($parameters, JSON_FORCE_OBJECT));
+            if (array_key_exists('useArray', $parameters)) {
+                unset($parameters['useArray']);
+                $request->setContent(json_encode($parameters));
+            } else {
+                $request->setContent(json_encode($parameters, JSON_FORCE_OBJECT));
+            }
         }
 
         $hasListeners = 0 < count($this->listeners);
